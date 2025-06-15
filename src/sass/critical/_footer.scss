@@ -1,0 +1,39 @@
+@use "../helpers" as *;
+
+.footer {
+  display: grid;
+  grid-template-columns: minmax(16px, 1fr) minmax(auto, 1120px) minmax(16px, 1fr);
+  row-gap: 24px;
+  background-color: scalecolor(blue, light75);
+  border-top: 1px solid scalecolor(blue, base);
+  padding: 24px 0px 24px 0px;
+  & > * {
+    grid-column: 2 / 3;
+  }
+  &-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 24px;
+    margin-bottom: 80px;
+  }
+  &-link {
+    display: grid;
+    height: 64px;
+    border-radius: 8px;
+    border: 1px solid scalecolor(blue, light45);
+    background-color: scalecolor(white, light75);
+    align-self: center;
+    cursor: pointer;
+    text-decoration: none;
+    // font-size: $fluid-1;
+    @extend %box-shadow;
+    & svg {
+      justify-self: center;
+      align-self: center;
+    }
+    & p {
+      grid-column: 2/3;
+      align-self: center;
+    }
+  }
+}

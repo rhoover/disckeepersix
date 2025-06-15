@@ -1,0 +1,14 @@
+@use "../core" as core;
+
+%inner-header {
+  grid-column: 1 / 4;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  border-top: 2px solid core.colorfunction(green, base);
+  border-bottom: 2px solid core.colorfunction(green, base);
+  background: core.colorfunction(blue, light45);
+  font-size: var(--step-3);
+  color: core.colorfunction(green, dark35);
+}

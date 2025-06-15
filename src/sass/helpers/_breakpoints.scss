@@ -1,0 +1,15 @@
+$tablet-width: 768px;
+$bigscreen-width: 1184px;
+
+@mixin tablet-breakpoint {
+  // @media (min-width: $tablet-width) and (max-width: $bigscreen-width) {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin bigscreen-breakpoint {
+  @media (min-width: $bigscreen-width) {
+    @content;
+  }
+}

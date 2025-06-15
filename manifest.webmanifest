@@ -1,0 +1,44 @@
+{
+  "name": "Vermont Artisans Trail",
+  "short_name": "VT Artisans",
+  "start_url": "/",
+  "id": "/",
+  "scope": "/",
+  "description": "A Comprehensive Mobile Reference and Directory of Vermont's Artisans and Their Communities",
+  "display": "standalone",
+  "background_color": "#f0f0f0",
+  "theme_color": "#66626F",
+  "categories": ["food", "travel", "lifestyle"],
+  "icons": [
+    {
+      "src": "./img/dk-icns/android-chrome-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/dk-icns/android-chrome-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/dk-icns/android-chrome-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/dk-icns/android-chrome-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/dk-icns/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/dk-icns/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

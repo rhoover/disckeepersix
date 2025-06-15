@@ -1,0 +1,49 @@
+@use "../core" as core;
+
+%scroller-modal {
+  position: absolute;
+  display: none;
+  z-index: 350;
+  right: 0px;
+  bottom: 16px;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(core.colorfunction(blue, base),0.75);
+  border-radius: 30% 0% 0% 30%;
+  border-top: 1px solid core.colorfunction(blue, dark25);
+  border-bottom: 1px solid core.colorfunction(blue, dark25);
+  border-left: 1px solid core.colorfunction(blue, dark25);
+  box-shadow:
+  0.1px 0.1px 0.4px rgba(0, 0, 0, 0.065),
+  0.3px 0.3px 1.1px rgba(0, 0, 0, 0.093),
+  0.6px 0.6px 2px rgba(0, 0, 0, 0.115),
+  1.1px 1.1px 3.6px rgba(0, 0, 0, 0.137),
+  2.1px 2.1px 6.7px rgba(0, 0, 0, 0.165),
+  5px 5px 16px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+  transition-timing-function: cubic-bezier(0.350, 0.010, 0.430, 0.930);
+  transition-property: opacity;
+  transition-delay: 0.25s;
+  transition-duration: 0.5s;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 14px;
+    left: 17px;
+    transform: rotate(45deg);
+    background: transparent;
+    border-top: 4.8px solid core.colorfunction(white, base);
+    border-left: 4.8px solid core.colorfunction(white, base);
+  }
+  &-visible {
+    display: block;
+  }
+  & p {
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    color: core.colorfunction(white, base);
+  }
+}

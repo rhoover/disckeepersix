@@ -1,0 +1,45 @@
+---
+layout: layouts/base.njk
+title: DiscKeeper - Create Course
+permalink: "/createcourse.html"
+---
+
+<!-- form element -->
+<form class="form">
+  <div class="form-input">
+    <input type="text" name="coursename" id="coursename" class="form-input-text" required>
+    <input type="reset" value="X" alt="Clear the search form" class="form-input-clear">
+    <label for="courseName"  class="form-input-label">Course Name:</label>
+  </div>
+  <div class="form-holes">
+    <p class="form-holes-question">How Many Holes Are There?</p>
+    <label class="form-holes-radio" for="holeradio9">
+      <input type="radio" name="holeradio"  id="holeradio9" value="9">
+      9 Holes
+    </label>
+    <label class="form-holes-radio" for="holeradio18">
+      <input type="radio" name="holeradio" id="holeradio18" value="18">
+      18 Holes
+    </label>
+  </div>
+
+  <!-- form response form-->
+  <div class="form-response">
+    <p class="form-holes-question">Are *ALL* the holes Par 3?</p>
+    <button type="submit" class="form-submit" value="samepar">Yes, Submit ➤</button>
+    <p class="form-holes-question">Or do you need to <span class="form-holes-question-italics">customize the pars</span> for some of the holes?</p>
+    <button type="submit" class="form-submit" value="differentpar">Yes, Customize ➤</button>
+  </div>
+</form>
+
+<!-- success dialog-->
+<dialog class="success">
+  <p class="success-text">Success!!</p>
+  <button class="success-button">Got It!</button>
+</dialog>
+
+<!-- exists dialog-->
+<dialog class="exists">
+  <p class="exists-text"></p>
+  <button class="exists-button">Got It!</button>
+</dialog>

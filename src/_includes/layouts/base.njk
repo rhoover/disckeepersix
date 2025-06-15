@@ -1,0 +1,24 @@
+
+  {% include 'components/head-element.njk' %}
+
+  <body>
+    
+    {% include "components/header.njk" %}
+    {% include "components/nav.njk" %}
+
+    <main class="{{ page.fileSlug or 'home' }}" >
+
+      {{ content | safe }}
+
+    </main>
+
+      {% include "components/scroll-button.njk" %}
+
+
+      {% if page.fileSlug == '' %}
+        {% include "components/share-button.njk" %}
+      {% endif %}
+
+      {% include "components/inlines.njk" %}
+      
+  </body>

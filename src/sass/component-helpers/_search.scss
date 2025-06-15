@@ -1,0 +1,48 @@
+@use "../core" as core;
+@use "../helpers" as helpers;
+
+%search-section {
+  position: relative;
+  background-color: core.colorfunction(white, base);
+}
+
+%search-label {
+  position: absolute;
+  top: 4px;
+  width: max-content;
+  background: core.colorfunction(white, base);
+}
+
+%search-svg {
+  position: absolute;
+  right: -2.25rem;
+  top: -4px;
+  fill: core.colorfunction(blue, light25);
+  height: 24px;
+  width: 24px;
+}
+
+%inputs {
+  // font-size: $fluid-1;
+  line-height: 3.5rem;
+  width: 100%;
+  padding-left: 16px;
+  background: transparent;
+  border-radius: 4xp;
+  border: 1px solid core.colorfunction(blue, base);
+  color: inherit;
+}
+
+%button-shadow {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+%cancel-search {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 40px;
+  width: 40px;
+  margin-left: 8px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='red' stroke='2px'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/></svg>");
+  cursor: pointer;
+}

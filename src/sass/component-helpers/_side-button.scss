@@ -1,0 +1,39 @@
+@use "../helpers" as helpers;
+@use "../core" as core;
+
+%side-button {
+  display: block;
+  position: fixed;
+  left: 0px;
+  bottom: 32px;
+  width: 65px;
+  height: 65px;
+  border-radius: 0% 30% 30% 0%;
+  border-right: 1px solid core.colorfunction(blue, dark25);
+  background-color: rgba(core.colorfunction(blue, base), 0.85);
+  border-top: 1px solid core.colorfunction(blue, dark25);
+  border-bottom: 1px solid core.colorfunction(blue, dark25);
+  box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.25);
+  cursor: pointer;
+  z-index: 350;
+  @extend %animate-helper;
+  & svg {
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    width: 65%;
+    height: 65%;
+    fill: core.colorfunction(white, light35);
+  }
+  &-visible {
+    display: block;
+  }
+  & p {
+    position: absolute;
+    top: 40px;
+    left: 12px;
+    color: core.colorfunction(white, light35);
+    font-weight: 700;
+  }
+}

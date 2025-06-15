@@ -1,0 +1,55 @@
+---
+  layout: layouts/base.njk
+  title: DiscKeeper - Create Round
+  permalink: "/roundsetup.html"
+---
+
+<!-- page content -->
+<section class="content">
+  <button class="button" rh-button="courses" type="button">Which Course?</button>
+  <div class="content-results">
+    <p class="selections-course">No Course Selected Yet.</p>
+  </div>
+  <p class="selections-course-error">**You Must Choose A Course**</p>
+</section>
+
+<section class="content">
+  <button class="button" rh-button="players" type="button">Add More Players?</button>
+  <div class="content-results">
+    <p class="selections-players"></p>
+  </div>
+</section>
+
+<button class="button" type="button" goscore>Start Keeping Score! ➤</button>
+
+<!-- modal courses -->
+<dialog class="modal-courses">
+  <h4 class="modal-courses-header">Courses</h4>
+  {# adding checkboxes here in form to select one course #}
+  <form id="courses-form" class="modal-courses-list"></form>
+  <section class="modal-courses-footer">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="modal-courses-footer-close-icon" action="close"  stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M2 30 L30 2 M30 30 L2 2" /></svg>
+    <p class="modal-courses-footer-close-text" action="close">Cancel</p>
+    <p class="modal-courses-footer-save-text" action="save">Confirm</p>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.881 89.842" class="modal-courses-footer-save-icon" action="save"  stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M1.232,55.541c-1.533-1.388-1.652-3.756-0.265-5.289c1.388-1.534,3.756-1.652,5.29-0.265l34.053,30.878l76.099-79.699 c1.429-1.501,3.804-1.561,5.305-0.132c1.502,1.428,1.561,3.803,0.133,5.305L43.223,88.683l-0.005-0.005 c-1.396,1.468-3.716,1.563-5.227,0.196L1.232,55.541L1.232,55.541z"/></svg>
+  </section>
+</dialog>
+
+<!-- modal players -->
+<dialog class="modal-players">
+  <h4 class="modal-players-header">Players</h4>
+  <p class="modal-players-explain">You, as the score keeper and app owner, have automatically been added to the list of players for this round.</p>
+  {# adding radio buttons here in form to select multiple players #}
+  <form id="players-form" class="modal-players-list"></form>
+  <section class="modal-players-footer">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="modal-players-footer-close-icon"  action = "close" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M2 30 L30 2 M30 30 L2 2" /></svg>
+    <p class="modal-players-footer-close-text" action = "close">Cancel</p>
+    <p class="modal-players-footer-save-text" action = "save">Confirm</p>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.881 89.842" class="modal-players-footer-save-icon"  action = "save" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M1.232,55.541c-1.533-1.388-1.652-3.756-0.265-5.289c1.388-1.534,3.756-1.652,5.29-0.265l34.053,30.878l76.099-79.699 c1.429-1.501,3.804-1.561,5.305-0.132c1.502,1.428,1.561,3.803,0.133,5.305L43.223,88.683l-0.005-0.005 c-1.396,1.468-3.716,1.563-5.227,0.196L1.232,55.541L1.232,55.541z"/></svg>
+  </section>
+</dialog>
+
+<!-- -->
+<dialog class="modal-success">
+  <p>Success!</p>
+</dialog>

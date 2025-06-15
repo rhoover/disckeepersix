@@ -1,0 +1,122 @@
+@use "../core" as core;
+@use "../helpers" as helpers;
+@use "../component-helpers" as components;
+
+header {
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 80px;
+  display: grid;
+  grid-template-columns: .25fr 1fr .25fr;
+  align-items: center;
+  justify-items: center;
+  color: core.colorfunction(white, base);
+  background-image: linear-gradient(rgba(core.colorfunction(blue, light15), 1.0), rgba(core.colorfunction(blue, base), 1.0));
+  border-bottom: 1px solid core.colorfunction(blue, dark35);
+  z-index: 55;
+}
+
+.back-button {
+  grid-column: 1 / 2;
+  @extend %header-button;
+  svg {
+    @extend %header-button-svg;
+    fill: core.colorfunction(white, light25);
+  }
+  &-text {
+    color: core.colorfunction(white, light25);
+    font-weight: 700;
+  }
+}
+
+.title {
+  grid-column: 2 / 3;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  &-icon {
+    justify-self: end;
+    padding-right: 16px;
+    aspect-ratio: auto 1 / 1;
+    filter: drop-shadow(0px 0px 2px white);
+  }
+  &-text {
+    justify-self: start;
+    font-size: var(--step-2);
+    text-decoration: none;
+    color: core.colorfunction(white, light25);
+    font-weight: 700;
+    &:hover {
+      color: core.colorfunction(white, base);
+      text-shadow: 0px 0px 7px core.colorfunction(black, base);
+    }
+    // @include tablet-breakpoint {
+    //   // font-size: $fluid-1;
+    //   justify-self: start;
+    //   margin-left: 16px;
+    // }
+  }
+}
+
+.menu-button {
+  grid-column: 3 / 4;
+  @extend %header-button;
+  &-text {
+    color: core.colorfunction(white, light25);
+    font-weight: 700;
+    align-self: start;
+    &-red {
+      color: rgb(255,0,0);
+    }
+  }
+}
+
+//https://codepen.io/samikeijonen/pen/jqvxdL
+.menu-toggle {
+  font-size: 0.875rem;
+}
+
+.icon {
+	fill: currentColor;
+	height: 16px;
+	width: 16px;
+}
+
+/* Menu toggle styles. */
+
+.icon-menu-toggle {
+	width: 32px;
+	height: 32px;
+  fill: core.colorfunction(white, base);
+  &-red {
+    fill: rgb(255,0,0);
+  }
+}
+
+/* Animate menu icon (lines). */
+.svg-menu-toggle .line {
+  transform: rotate(0) translateY(0) translateX(0);
+  transform-origin: 16px 16px;
+  @extend %animate-helper;
+}
+.svg-menu-toggle .line-1 {
+  transform-origin: 16px 40px;
+}
+.svg-menu-toggle .line-3 {
+  transform-origin: 16px 72px;
+}
+
+.menu-toggle.opened .svg-menu-toggle .line-1 {
+  transform: rotate(45deg) translateY(10.4px) translateX(-4.8px);
+  color: core.colorfunction(red, dark25);
+}
+.menu-toggle.opened .svg-menu-toggle .line-2 {
+  opacity: 0;
+}
+.menu-toggle.opened .svg-menu-toggle .line-3 {
+  transform: rotate(-45deg) translateY(0px) translateX(0px);
+  color: core.colorfunction(red, dark25);
+}

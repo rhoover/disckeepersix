@@ -1,0 +1,113 @@
+@use 'sass:color';
+@use 'sass:map';
+
+// And now, onto the show:
+$green: rgb(109, 154, 101);
+$blue:rgb(101, 109, 154);
+$red: rgb(114, 0, 36);
+$white: rgb(240, 240, 240);
+$black: rgb(44, 44, 44);
+
+$colors: (
+  green: (
+    dark85: color.scale($green, $blackness: 85%),
+    dark75: color.scale($green, $blackness: 75%),
+    dark65: color.scale($green, $blackness: 65%),
+    dark55: color.scale($green, $blackness: 55%),
+    dark45: color.scale($green, $blackness: 45%),
+    dark35: color.scale($green, $blackness: 35%),
+    dark25: color.scale($green, $blackness: 25%),
+    dark15: color.scale($green, $blackness: 15%),
+    base: $green,
+    light15: color.scale($green, $lightness: 15%),
+    light25: color.scale($green, $lightness: 25%),
+    light35: color.scale($green, $lightness: 35%),
+    light45: color.scale($green, $lightness: 45%),
+    light55: color.scale($green, $lightness: 55%),
+    light65: color.scale($green, $lightness: 65%),
+    light75: color.scale($green, $lightness: 75%),
+    light85: color.scale($green, $lightness: 85%),
+  ),
+  blue: (
+    dark85: color.scale($blue, $blackness: 85%),
+    dark75: color.scale($blue, $blackness: 75%),
+    dark65: color.scale($blue, $blackness: 65%),
+    dark55: color.scale($blue, $blackness: 55%),
+    dark45: color.scale($blue, $blackness: 45%),
+    dark35: color.scale($blue, $blackness: 35%),
+    dark25: color.scale($blue, $blackness: 25%),
+    dark15: color.scale($blue, $blackness: 15%),
+    base: $blue,
+    light15: color.scale($blue, $lightness: 15%),
+    light25: color.scale($blue, $lightness: 25%),
+    light35: color.scale($blue, $lightness: 35%),
+    light45: color.scale($blue, $lightness: 45%),
+    light55: color.scale($blue, $lightness: 55%),
+    light65: color.scale($blue, $lightness: 65%),
+    light75: color.scale($blue, $lightness: 75%),
+    light85: color.scale($blue, $lightness: 85%),
+  ),
+  red: (
+    dark85: color.scale($red, $blackness: 85%),
+    dark75: color.scale($red, $blackness: 75%),
+    dark65: color.scale($red, $blackness: 65%),
+    dark55: color.scale($red, $blackness: 55%),
+    dark45: color.scale($red, $blackness: 45%),
+    dark35: color.scale($red, $blackness: 35%),
+    dark25: color.scale($red, $blackness: 25%),
+    dark15: color.scale($red, $blackness: 15%),
+    base: $red,
+    light15: color.scale($red, $lightness: 15%),
+    light25: color.scale($red, $lightness: 25%),
+    light35: color.scale($red, $lightness: 35%),
+    light45: color.scale($red, $lightness: 45%),
+    light55: color.scale($red, $lightness: 55%),
+    light65: color.scale($red, $lightness: 65%),
+    light75: color.scale($red, $lightness: 75%),
+    light85: color.scale($red, $lightness: 85%),
+  ),
+  white: (
+    dark85: color.scale($white, $blackness: 85%),
+    dark75: color.scale($white, $blackness: 75%),
+    dark65: color.scale($white, $blackness: 65%),
+    dark55: color.scale($white, $blackness: 55%),
+    dark45: color.scale($white, $blackness: 45%),
+    dark35: color.scale($white, $blackness: 35%),
+    dark25: color.scale($white, $blackness: 25%),
+    dark15: color.scale($white, $blackness: 15%),
+    base: $white,
+    light15: color.scale($white, $lightness: 15%),
+    light25: color.scale($white, $lightness: 25%),
+    light35: color.scale($white, $lightness: 35%),
+    light45: color.scale($white, $lightness: 45%),
+    light55: color.scale($white, $lightness: 55%),
+    light65: color.scale($white, $lightness: 65%),
+    light75: color.scale($white, $lightness: 75%),
+    light85: color.scale($white, $lightness: 85%),
+  ),
+  black: (
+    dark85: color.scale($black, $blackness: 85%),
+    dark75: color.scale($black, $blackness: 75%),
+    dark65: color.scale($black, $blackness: 65%),
+    dark55: color.scale($black, $blackness: 55%),
+    dark45: color.scale($black, $blackness: 45%),
+    dark35: color.scale($black, $blackness: 35%),
+    dark25: color.scale($black, $blackness: 25%),
+    dark15: color.scale($black, $blackness: 15%),
+    base: $black,
+    light15: color.scale($black, $lightness: 15%),
+    light25: color.scale($black, $lightness: 25%),
+    light35: color.scale($black, $lightness: 35%),
+    light45: color.scale($black, $lightness: 45%),
+    light55: color.scale($black, $lightness: 55%),
+    light65: color.scale($black, $lightness: 65%),
+    light75: color.scale($black, $lightness: 75%),
+    light85: color.scale($black, $lightness: 85%),
+  )
+);
+
+
+// Our function for shorter usage of map-get();
+@function colorfunction($color, $tone: base) {
+  @return map.get(map.get($colors, $color), $tone);
+}

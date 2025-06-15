@@ -1,0 +1,202 @@
+  {#########################################}
+  {# Back Button #}
+  {#########################################}
+  {% set js %}
+    {% include "../../js/inline/backbutton.js" %}
+  {% endset %}
+  <!-- back button behavior -->
+  <script>
+    {{ js | jsmin | safe }}
+  </script>  
+  
+  {#########################################}
+  {# Menu Button #}
+  {#########################################}
+  {% set js %}
+    {% include "../../js/inline/menubutton.js" %}
+  {% endset %}
+  <!-- menu button behavior -->
+  <script>
+    {{ js | jsmin | safe }}
+  </script>
+  
+  {#########################################}
+  {# Share Side Button #}
+  {#########################################}
+  {% set js %}
+    {% include "../../js/inline/share-side-button.js" %}
+  {% endset %}
+  <!-- share button behavior -->
+  <script>
+    {{ js | jsmin | safe }}
+  </script>
+
+  {#########################################}
+  {# Scroll Button #}
+  {#########################################}
+  {% set js %}
+    {% include "../../js/inline/scroll-top.js" %}
+  {% endset %}
+  <!-- scroll button behavior -->
+  <script>
+    {{ js | jsmin | safe }}
+  </script>
+
+  {#########################################}
+  {# Local Forage For Logged In User #}
+  {#########################################}
+  <!-- local forage package-->
+  <script src="{{ '/js/packages/localforage.min.js' | url }}"></script>
+  <!-- local forage config -->
+  {% set js %}
+    {% include "../../js/inline/localForage-config.js" %}
+  {% endset %}
+  <script>
+    {{ js | jsmin | safe }}
+  </script>
+
+  {#########################################}
+  {# Home Page Behavior #}
+  {#########################################}
+  {% if page.fileSlug == '' %}
+  <!-- home primary players behavior-->
+    {% set js %}
+      {% include "../../js/inline/home.js" %}
+    {% endset %}
+    <script>
+      {{ js | jsmin | safe }}
+    </script>
+  {% endif %}
+
+  {#########################################}
+  {# Create Player Page Behavior #}
+  {#########################################}
+  {% if page.fileSlug == 'createplayer' %}
+  <!-- create players page behavior-->
+    {% set js %}
+      {% include "../../js/inline/createplayer.js" %}
+    {% endset %}
+    <script>
+      {{ js | jsmin | safe }}
+    </script>
+  {% endif %}
+
+  {#########################################}
+  {# Create Course Page Behavior #}
+  {#########################################}
+  {% if page.fileSlug == 'createcourse' %}
+  <!-- create course page behavior-->
+    {% set js %}
+      {% include "../../js/inline/createcourse.js" %}
+    {% endset %}
+    <script>
+      {{ js | jsmin | safe }}
+    </script>
+  {% endif %}
+
+  {#########################################}
+  {# Adjust Pars Page Behavior #}
+  {#########################################}
+  {% if page.fileSlug == 'adjustpars' %}
+  <!-- adjust pars page behavior-->
+    {% set js %}
+      {% include "../../js/inline/adjustpars.js" %}
+    {% endset %}
+    <script>
+      {{ js | jsmin | safe }}
+    </script>
+  {% endif %}
+
+  {#########################################}
+  {# List Players Page Behavior #}
+  {#########################################}
+  {% if page.fileSlug == 'listplayers' %}
+  <!-- list players page behavior-->
+    {% set js %}
+      {% include "../../js/inline/listplayers.js" %}
+    {% endset %}
+    <script>
+      {{ js | jsmin | safe }}
+    </script>
+  {% endif %}
+
+  {#########################################}
+  {# List Courses Page Behavior #}
+  {#########################################}
+  {% if page.fileSlug == 'listcourses' %}
+  <!-- list courses page behavior-->
+    {% set js %}
+      {% include "../../js/inline/listcourses.js" %}
+    {% endset %}
+    <script>
+      {{ js | jsmin | safe }}
+    </script>
+  {% endif %}
+
+  {#########################################}
+  {# Round Set Up Page Behavior #}
+  {#########################################}
+  {% if page.fileSlug == 'roundsetup' %}
+  <!-- round setup page behavior-->
+    {% set js %}
+      {% include "../../js/inline/roundsetup.js" %}
+    {% endset %}
+    <script>
+      {{ js | jsmin | safe }}
+    </script>
+  {% endif %}
+
+  {#########################################}
+  {# Round Scoring Page Behavior #}
+  {#########################################}
+  {% if page.fileSlug == 'roundscoring' %}
+  <!-- round scoring page behavior-->
+    {% set js %}
+      {% include "../../js/inline/roundscoring.js" %}
+    {% endset %}
+    <script>
+      {{ js | jsmin | safe }}
+    </script>
+  {% endif %}
+
+  {#########################################}
+  {# Round History Page Behavior #}
+  {#########################################}
+  {% if page.fileSlug == 'roundhistory' %}
+  <!-- round hostory page behavior-->
+    {% set js %}
+      {% include "../../js/inline/roundhistory.js" %}
+    {% endset %}
+    <script>
+      {{ js | jsmin | safe }}
+    </script>
+    <!-- round history scroller button behavior-->
+    {% set js %}
+      {% include "../../js/inline/scroll-top.js" %}
+    {% endset %}
+    <script>
+      {{ js | jsmin | safe }}
+    </script>
+    <!-- round history modal-scroller button behavior-->
+    {% set js %}
+      {% include "../../js/inline/scroll-top-modal-history.js" %}
+    {% endset %}
+    <script>
+      {{ js | jsmin | safe }}
+    </script>
+  {% endif %}
+
+  {#########################################}
+  {# Course Statistics Page Behavior #}
+  {#########################################}
+  {% if page.fileSlug == 'statistics' %}
+    <!-- chart package from afar -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.6.0/dist/echarts.min.js"></script>
+    <!-- statistics page behavior-->
+    {% set js %}
+      {% include "../../js/inline/statistics.js" %}
+    {% endset %}
+    <script>
+      {{ js | jsmin | safe }}
+    </script>
+  {% endif %}

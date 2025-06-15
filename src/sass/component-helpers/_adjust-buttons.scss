@@ -1,0 +1,11 @@
+@use "../core" as core;
+
+%adjust-buttons {
+  grid-column: 3 / 4;
+  background: core.colorfunction(blue, light65);
+  border: 1px solid core.colorfunction(green, base);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,75 @@
+---
+layout: layouts/base.njk
+title: DiscKeeper - Home
+---
+
+<section class="creds">
+  <button class="creds-button" data-button="signup">
+    <span>Sign-Up ➤</span><br />
+  </button>
+  <button class="creds-button" data-button="login">
+    <span>Log-In ➤</span><br />
+  </button>
+  <p class="creds-prompt">One Or The Other, Please Choose So You Can Start Keeping Score!</p>
+</section>
+
+<a href="/roundsetup.html" class="links links-scoring">
+  <p class="links-text">Score A Round</p>
+</a>
+<a href="/createcourse.html" class="links links-createcourse" >
+  <p class="links-text">Create A Course</p>
+</a>
+<a href="/createplayer.html" class="links links-createplayer" >
+  <p class="links-text">Create A Player</p>
+</a>
+<a href="/roundhistory.html" class="links links-roundhistory">
+  <p class="links-text">Round History</p>
+</a>
+
+<!-- modal signup -->
+<dialog class="modal" data-modal="signup">
+  <h3> Sign Up</h3>
+  <hr />
+  <p>All Fields Are Required</p>
+  <form class="modal-form">
+    <label for="signup-name-first">
+      First Name:
+      <input type="text" name="signup-namefirst" id="signup-name-first" placeholder="Your First Name..." autocomplete="on" required/>
+    </label>
+    <label for="signup-name-last">
+      Last Name:
+      <input type="text" name="signup-namelast" id="signup-name-last" placeholder="Your Last Name..." autocomplete="on" required/>
+    </label>
+    <label for="signup-email">
+      Email:
+      <input type="email" name="signup-email" id="signup-email" placeholder="Your Email..." autocomplete="on" required/>
+    </label>
+    <label for="signup-password">
+      Password:
+      <input type="password" name="signup-password" id="signup-password"  placeholder="Your Password..." autocomplete="on" required/>
+      <svg xmlns="http://www.w3.org/2000/svg"  height="24.894" width="50" fill="none" viewBox="0 0 50 24.894" class="password-show"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.42 12.713c-.136-.215-.204-.323-.242-.49a1.173 1.173 0 0 1 0-.446c.038-.167.106-.274.242-.49C3.546 9.505 6.895 5 12 5s8.455 4.505 9.58 6.287c.137.215.205.323.243.49.029.125.029.322 0 .446-.038.167-.106.274-.242.49C20.455 14.495 17.105 19 12 19c-5.106 0-8.455-4.505-9.58-6.287Z"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></svg>
+    </label>
+    <button data-button="signup-submit" type="submit">Submit  ➤</button>
+    <p data-success="signup">Please KNOW, this info is NOT being Shared With ANY Third Party!</p>
+  </form>
+</dialog>
+
+<!-- modal login -->
+<dialog class="modal" data-modal="login">
+  <h3>Log In</h3>
+  <hr />
+  <p>All Fields Are Required</p>
+  <form class="modal-form">
+    <label for="login-email">
+      Email:
+      <input type="email" id="login-email" placeholder="Your Email..." autocomplete="on" required/>
+    </label>
+    <label for="login-password">
+      Password:
+      <input type="password" id="login-password"  placeholder="Your Password..." autocomplete="on" required/>
+      <svg xmlns="http://www.w3.org/2000/svg"  height="24.894" width="50" fill="none" viewBox="0 0 50 24.894" class="password-show"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.42 12.713c-.136-.215-.204-.323-.242-.49a1.173 1.173 0 0 1 0-.446c.038-.167.106-.274.242-.49C3.546 9.505 6.895 5 12 5s8.455 4.505 9.58 6.287c.137.215.205.323.243.49.029.125.029.322 0 .446-.038.167-.106.274-.242.49C20.455 14.495 17.105 19 12 19c-5.106 0-8.455-4.505-9.58-6.287Z"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></svg>
+    </label>
+    <button data-button="login-submit" type="submit">Submit  ➤</button>
+    <p data-success="login">Please KNOW, this info is NOT being Shared With ANY Third Party!</p>
+  </form>
+</dialog>

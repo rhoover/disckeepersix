@@ -1,0 +1,37 @@
+@use "../core" as core;
+@use "../helpers" as helper;
+@use "../component-helpers" as component;
+
+.scroller {
+  @extend %side-button;
+  display: block;
+  right: 0;
+  left: calc(100vw - 60px);
+  border-radius: 30% 0% 0% 30%;
+  border-right: none;
+  border-right: none;
+  border-bottom: 1px solid core.colorfunction(blue, dark25);
+  border-left: 1px solid core.colorfunction(blue, dark25);
+  opacity: 0;
+  // @include tablet-breakpoint {
+  //   left: calc(100vw - 75px);
+  // }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 14px;
+    left: 17px;
+    transform: rotate(45deg);
+    background: transparent;
+    border-top: 5px solid core.colorfunction(white, light35);
+    border-left: 5px solid core.colorfunction(white, light35);
+  }
+  &-visible {
+    opacity: 1;
+  }
+  & p {
+    left: 18px;
+  }
+}

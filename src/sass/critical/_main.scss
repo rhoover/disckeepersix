@@ -1,0 +1,11 @@
+main {
+  margin-top: 96px;
+  min-height: calc(100vh - 96px);
+  display: grid;
+  grid-template-columns: minmax(16px, 1fr) minmax(auto, 1120px) minmax(16px, 1fr);
+  grid-template-rows: max-content;
+  margin-bottom: 1rem;
+  & > * {
+    grid-column: 2 / 3;
+  }
+}

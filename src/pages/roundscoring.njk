@@ -1,0 +1,56 @@
+---
+  layout: layouts/base.njk
+  title: DiscKeeper - Scorekeeping
+  permalink: "/roundscoring.html"
+  numbers:
+    - 9
+    - 8
+    - 7
+    - 6
+    - 5
+    - 4
+    - 3
+    - 2
+    - 1
+    - 0
+---
+
+
+<p class="course-name" courseName></p>
+
+<!-- hole information -->
+<section class="meta">
+  <p class="meta-hole">Hole:     <span class="meta-hole-number" holeNumber></span></p>
+  <p class="meta-par">Par:     <span class="meta-par-number" parNumber></span></p>
+</section>
+
+<!-- number pad -->
+<num-pad class="numpad">
+  {% for number in numbers %}
+    <p class="numpad-button" step="{{number}}">{{number}}</p>
+  {% endfor %}
+  <p class="numpad-clear" clear="''"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M433.5 96H167.2c-12.2 0-21.8 6.2-28.2 15.6L43 256l96 144.2c6.4 9.4 16 15.8 28.2 15.8h266.2c19.5 0 35.5-16 35.5-35.6V131.6C469 112 453 96 433.5 96zm-53.3 223.8l-25 25.1-63.7-63.8-63.7 63.8-25-25.1 63.7-63.8-63.7-63.8 25-25.1 63.7 63.8 63.7-63.8 25 25.1-63.7 63.8 63.7 63.8z"/></svg>Clear</p>
+</num-pad>
+
+<!-- scoring process -->
+<section class="confirm">
+  <p class="confirm-name"><span class="confirm-name-bold" playerConfirmName></span> threw a:</p>
+  <p class="confirm-name-throws">-- <span throws></span> --</p>
+  <button class="confirm-submit" type="submit" submit="xyz">Enter <span playerConfirmname></span>'s Score ➤</button>
+</section>
+<!-- score displays -->
+<p class="scores">Round Score(s):</p>
+<section class="players"></section>
+
+<!-- finished modal -->
+<dialog class="modal">
+  <h4 class="modal-header"></h4>
+  <p class="modal-date"></p>
+  <section class="modal-round" rounddata></section>
+  <div class="modal-footer">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="modal-footer-close-icon"  stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M2 30 L30 2 M30 30 L2 2" /></svg>
+    <p class="modal-footer-close-text">Close</p>
+    <p class="modal-footer-save-text">Save</p>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.881 89.842" class="modal-footer-save-icon"  stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M1.232,55.541c-1.533-1.388-1.652-3.756-0.265-5.289c1.388-1.534,3.756-1.652,5.29-0.265l34.053,30.878l76.099-79.699 c1.429-1.501,3.804-1.561,5.305-0.132c1.502,1.428,1.561,3.803,0.133,5.305L43.223,88.683l-0.005-0.005 c-1.396,1.468-3.716,1.563-5.227,0.196L1.232,55.541L1.232,55.541z"/></svg>
+  </div>
+</dialog>

@@ -1,0 +1,47 @@
+@use "../core" as core;
+@use "../helpers" as helpers;
+
+%form {
+  display: grid;
+  grid-template-rows: repeat(3, max-content);
+  row-gap: 38.4px;
+  margin-top: 49.6px;
+  &-input-text {
+    width: 100%;
+    padding-left: 16px;
+    border-radius: 4px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid core.colorfunction(green, dark25);
+    border-left: 1px solid core.colorfunction(green, dark25);
+    background: transparent;
+    line-height: calc(var(--step-3) * 1.33);
+    font-size: var(--step-3);
+  }
+  &-input-label {
+    display: inline-block;
+    transform: translateY(-5.75rem);
+    background: transparent;
+    font-size: var(--step-3);
+    font-weight: 700;
+  }
+  &-input-button {
+    position: relative;
+    padding: 16px 0px;
+    background: core.colorfunction(blue, light85);
+    border: 1px solid core.colorfunction(green, dark45);
+    border-radius: 10.4px;
+    color: core.colorfunction(green, dark25);
+    font-size: var(--step-2);
+    @extend %box-shadow;
+    &:disabled {
+      opacity: 50%;
+      color: core.colorfunction(black, light65);
+      background: core.colorfunction(blue, light85);
+      border: 1px solid core.colorfunction(red, base);
+    }
+    &:active {
+      background: linear-gradient(rgba(core.colorfunction(blue, light25), 0.25), rgba(core.colorfunction(blue, light15), 0.35));
+    }
+  }
+}

@@ -1,0 +1,14 @@
+
+
+%header-button {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+%header-button-svg {
+  height: 25px;
+  width: 25px;
+}

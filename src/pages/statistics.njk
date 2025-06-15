@@ -1,0 +1,23 @@
+---
+  layout: layouts/base.njk
+  title: DiscKeeper - Statistics
+  permalink: "/statistics.html"
+---
+
+<!-- course list -->
+<section class="courses"><p class="courses-wait">Incoming Data...</p></section>
+
+<!-- hole-by-hole chart -->
+<dialog class="holes">
+  <div class="holes-header"></div>
+  <p class="holes-close">Close</p>
+  <div class="holes-chart"></div>
+  {% include "components/scroll-button-modal.njk" %}
+</dialog>
+
+<!-- course chart-->
+<dialog class="course">
+  <div class="course-header"></div>
+  <p class="course-close">Close</p>
+  <div id= "course-chart" class="course-chart" style="height: 100%"></div>
+</dialog>

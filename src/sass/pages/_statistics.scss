@@ -1,0 +1,137 @@
+@use "../core" as core;
+@use "../helpers" as helper;
+@use "../component-helpers" as component;
+
+.courses {
+  display: grid;
+  row-gap: 16px;
+  &-wait {
+    text-align: center;
+    padding: 16px;
+    border: 1px solid core.colorfunction(blue, base);
+    border-radius: 8px;
+  }
+}
+
+.course-card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  row-gap: 16px;
+  align-items: center;
+  justify-items: center;
+  padding: 16px;
+  border-radius: 4px;
+  border: 1px solid core.colorfunction(blue, base);
+  background: core.colorfunction(white, light55);
+  @extend %box-shadow;
+  &-name {
+    grid-column: 1 / 3;
+    font-size: var(--step-3);
+    font-weight: 700;
+  }
+  &-button {
+    @extend %form-input-button;
+    font-size: var(--step-0);
+    font-weight: 700;
+    width: 90%;
+  }
+  & [data-choice="round"] {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+  }
+  & [data-choice="holes"] {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+  }
+  &-count {
+    grid-column: 1 / 3;
+    font-size: var(--step-0);
+  }
+}
+
+// holes modal dialog
+.holes {
+  @extend %dialog-success;
+  padding: 0px;
+  &[open] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    width: 100vw;
+  }
+  &-header {
+    @extend %modal-header;
+    &-text {
+      @extend %modal-header-text;
+      font-size: var(--step-2);
+      font-weight: 700;
+    }
+  }
+  &-close {
+    @extend %modal-close-button;
+    margin-right: 0px;
+    margin: 16px 16px 16px 16px;
+  }
+  &-chart-hole {
+    margin: 16px 8px 16px 8px;
+    padding: 8px;
+    border: 1px solid core.colorfunction(blue, base);
+    border-radius: 8px;
+    @extend %box-shadow;
+  }
+}
+
+// course modal dialog
+.course {
+  @extend %dialog-success;
+  padding: 0px;
+  &[open] {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 100vw;
+  }
+  &-header {
+    @extend %modal-header;
+    &-text {
+      @extend %modal-header-text;
+    }
+  }
+  &-close {
+    @extend %modal-close-button;
+    margin-right: 0px;
+    margin: 16px 16px 16px 16px;
+  }
+  &-chart {
+    // margin-top: 16px;
+    border-top: 1px solid core.colorfunction(blue, base);
+  }
+}
+
+.scroller-modal {
+  @extend %scroller-modal;
+  &-visible {
+    @extend %scroller-modal-visible;
+  }
+}
+
+// for modal dialogs
+@keyframes show {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+// for backdrop
+keyframes show-backdrop {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}

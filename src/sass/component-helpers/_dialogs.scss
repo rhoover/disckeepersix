@@ -1,0 +1,25 @@
+@use "../core" as core;
+
+%dialog {
+  &-success {
+    opacity: 0;
+    text-align: center;
+    color: core.colorfunction(green, dark25);
+    background-color: core.colorfunction(white, light75);
+    padding: 32px;
+    border: 1px solid core.colorfunction(green, base);
+    border-radius: 10.4px;
+    &[open] {
+      animation:  1s cubic-bezier(0.785, 0.135, 0.15, 0.86) forwards show;
+      margin: auto;
+      background-color: rgba(core.colorfunction(white, light75), 0.95);
+      &::backdrop {
+        animation: 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards show-backdrop;
+      }
+    }
+    &::backdrop {
+      background: rgba(core.colorfunction(blue, base), 0.35);
+      backdrop-filter: blur(0.2rem);
+    }
+  }
+}

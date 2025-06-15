@@ -1,0 +1,92 @@
+@use "../core" as core;
+@use "../helpers" as helper;
+@use "../component-helpers" as component;
+
+.header {
+    @extend %inner-header;
+}
+.name {
+  text-align: center;
+  margin-bottom: 16px;
+  color: core.colorfunction(green, base);
+  border-top: 1px solid core.colorfunction(green, dark25);
+  border-bottom: 1px solid core.colorfunction(green, dark25);
+}
+.items {
+    display: grid;
+    row-gap: 32px;
+    padding-top: 16px;
+}
+.item {
+    display: grid;
+    grid-template-rows: max-content;
+    grid-template-columns: 1fr max-content 1fr;
+    row-gap: 16px;
+    column-gap: 16px;
+    padding: 16px;
+    border-radius: 4px;
+    border: 1px solid core.colorfunction(green, dark25);
+    @extend %box-shadow;
+      background-color: core.colorfunction(white, light75);
+    &-hole {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      font-size: var(--step-3);
+      font-weight: 700;
+      color: core.colorfunction(black, light25);
+    }
+    &-par {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      color: core.colorfunction(blue, dark55);
+      font-size: var(--step-3);
+      font-weight: 700;
+    }
+    &-advice {
+      grid-column: 2 / 3;
+      grid-row: 1 / 3;
+      align-self: center;
+      font-size: var(--step-3);
+      font-weight: 700;
+    }
+    &-increase {
+      @extend %adjust-buttons;
+      grid-row: 1 / 2;
+      & svg {
+        width: 32px;
+        fill: core.colorfunction(green, base);
+      }
+    }
+    &-decrease {
+      @extend %adjust-buttons;
+      grid-row: 2 / 3;
+      & svg {
+        width: 32px;
+        fill: core.colorfunction(red, base);
+      }
+    }
+} // end item
+
+.submit {
+    @extend %form-input-button;
+    @extend %box-shadow;
+    font-weight: 700;
+    width: 100%;
+    margin-top: 49.6px;
+    margin-bottom: 28.8px;
+}
+
+// for success box
+dialog.success {
+  @extend %dialog-success;
+  font-size: var(--step-3);
+}
+
+@keyframes show {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}

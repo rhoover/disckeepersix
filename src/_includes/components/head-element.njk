@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>{{ title }}</title>
+    
+    <!-- Critical Styles -->
+    {% set critical %}
+      {% include "../../critical/critical.css" %}
+    {% endset %}
+    <style>
+      {{ critical | safe }}
+    </style>
+
+    <!-- Normal Styles -->
+
+    {% if page.fileSlug == '' %}
+      <link rel="stylesheet" type="text/css" href="{{ "/css/style-home.css" | rev }}" media="tty" onload="this.media='screen'"/>
+    {% else %}
+    {# This is how to concatenate strings with Nunjucks, join stuff in an array #}
+      {% set cssName = ['/css/style-', page.fileSlug, '.css'] | join %}
+      {# each stylesheet has its own name #}
+      <link rel="stylesheet" type="text/css" href="{{ cssName | rev }}" media="tty" onload="this.media='screen'"/>
+    {% endif%}
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A Comprehensive Mobile Reference and Directory of Vermont's Artisans and Their Communities">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Vermont Artisans Trail">
+    <meta name="apple-mobile-web-app-title" content="Vermont Artisans Trail">
+    <meta name='apple-touch-fullscreen' content='yes'>
+    <meta name="theme-color" content="#5b6dc8">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Because Microsoft Exists -->
+    <meta name="msapplication-starturl" content="vermontartisans.org">
+    <meta name="msapplication-config" content="/img/artisan-icns/browserconfig.xml">
+    <meta name="msapplication-navbutton-color" content="#5b6dc8">
+    <meta name="msapplication-TileColor" content="#5b6dc8">
+
+    <meta name="generator" content="{{ eleventy.generator }}">
+
+    <!-- Chrome for Android Add To Homescreen -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Chrome for Android Tool Bar Color -->
+    <meta name="theme-color" content="#5b6dc8">
+
+    <!-- Facebook -->
+    <meta property="og:url" content="https://vermontartisans.org" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Vermont Artisans" />
+    <meta property="og:image" content="https://vermontartisans.org/img/trail-sign.png" />
+    <meta property="og:description" content="A Comprehensive Mobile Reference and Directory of Vermont's Artisans and Their Communities" />
+    <meta property="og:site_name" content="Vermont Artisans Trail" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:url" content="https://vermontartisans.org" />
+    <meta name="twitter:site" content="@robinhoover">
+    <meta property="twitter:title" content="Vermont Artisans Trail" />
+    <meta property="twitter:description" content="A Comprehensive Mobile Reference and Directory of Vermont's Artisans and Their Communities" />
+    <meta property="twitter:image" content="https://vermontartisans.org/img/trail-sign.png" />
+
+    <!-- The Essential Links -->
+    <link rel="icon" href="/favicon.ico">
+    <link rel="author" href="http://www.moosedog.io">
+    <link rel="canonical" href="https://vermontartisans.org{{ page.url }}">
+    <link rel="manifest" href="/manifest.webmanifest">
+
+
+  </head>

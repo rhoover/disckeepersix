@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+title: DiscKeeper - Create Player
+permalink: "/createplayer.html"
+---
+<form class="form">
+  <label for="playerNameFirst"  class="form-input-label">First Name:
+    <input type="text" name="playerNameFirst" id="playerNameFirst" class="form-input-text" required>
+  </label>
+  <label for="playerNameLast"  class="form-input-label">Last Name:
+    <input type="text" name="playerNameLast" id="playerNameLast" class="form-input-text" required>
+  </label>
+  <p class="form-required">*Both Fields Are Required</p>
+  <button type="submit" class="form-submit">Submit ➤</button>
+</form>
+
+<!-- succes dialog -->
+<dialog class="success">
+  <p>Success!! <span class="name"></span> Has Been Added!</p>
+  <button class="success-button">Got It!</button>
+</dialog>
+
+<!-- already exists dialog  -->
+<dialog class="exists">
+  <p><span class="name"></span> Already Exists</p>
+  <button class="exists-button">Got It!</button>
+</dialog>

@@ -1,0 +1,102 @@
+@use "../core" as core;
+@use "../helpers" as helper;
+
+
+.nav {
+  position: fixed;
+  top: 16px;
+  z-index: 25;
+  width: 50vw;
+  left: -50vw;
+  min-height: calc(100vh - 64px);
+  background-image: linear-gradient(rgba(core.colorfunction(blue, base), 1.0), rgba(core.colorfunction(blue, light25), 1.0));
+  border-right: 1px solid core.colorfunction(green, base);
+  @extend %animate-helper;
+  &-item {
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    position: relative;
+    height: 56px;
+    align-items: center;
+    padding-left: 20px;
+    border-top: 1px solid rgba(core.colorfunction(green, dark45), 0.5);
+    &:hover {
+      background-color: core.colorfunction(blue, dark25);
+      cursor: pointer;
+    }
+    &-link {
+      text-decoration: none;
+      color: core.colorfunction(white, base);
+    }
+    &-icon {
+      position: absolute;
+      right: 16px;
+      color: core.colorfunction(white, base);
+      font-size: 3rem;
+      transition: 0.2s;
+      &-toggled {
+        color: core.colorfunction(red, dark25);
+        transform: rotate(45deg);
+      }
+    }
+    &-content {
+      position: absolute;
+      top: 0px;
+      width: 70%;
+      background-image: linear-gradient(rgba(core.colorfunction(blue, base), 1.0), rgba(core.colorfunction(blue, light25), 1.0));
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.5s linear;
+      &-active {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(142%);
+        transition: all 0.5s linear;
+        transition: opacity 0.5s linear;
+      }
+      &-item {
+        height: 56px;
+        display: grid;
+        grid-template-columns: 35px 1fr;
+        align-items: center;
+        padding-left: 20px;
+        border-top: 1px solid rgba(core.colorfunction(green, dark45), 0.5);
+        &:hover {
+          background-color: core.colorfunction(blue, dark25);
+        }
+      }
+    }
+    &:last-of-type {
+      border-bottom: 1px solid rgba(core.colorfunction(green, dark45), 0.5);
+    }
+    &-small {
+      font-size: 0.5rem;
+      font-weight: 700;
+      margin-left: 3.5rem;
+    }
+  }
+  &-open {
+    transform: translateX(100%) translateY(64px);
+    box-shadow: 10px 0px 16px 0px rgba(0,0,0,0.25);
+  }
+  &-close {
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    align-items: center;
+    padding: 20px 0px 20px 20px;
+    border-top: 1px solid rgba(core.colorfunction(green, dark45), 0.5);
+    cursor: pointer;
+    & svg {
+      fill: rgb(255,0,0);
+      width: 30px;
+      height: 30px;
+      grid-column: 1 / 2;
+    }
+    &-text {
+      grid-column: 2 / 3;
+      color:rgb(255,0,0);
+      font-weight: 700;
+    }
+  }
+
+}
