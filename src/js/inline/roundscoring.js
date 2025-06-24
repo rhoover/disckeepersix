@@ -147,6 +147,7 @@
       function scorekeeping(incomingThrows, activePlayer) {
         // the parameters come from clicking the submit button above
 
+        // grand switch: is it the last hole or not
         switch (true) {
           // if it's not the last hole
           case roundIndex < course.courseHoles.length -1:
@@ -189,6 +190,7 @@
             // then UI goodness: different colors for different scores
             roundScore = activePlayer.courseHoles[roundIndex].roundOverUnder;
 
+            // over, under or par switch
             switch (true) {
               // over par
               case roundScore > 0:
@@ -216,7 +218,7 @@
 
               default:
               break;
-            }; // end switch - roundscore
+            }; // end switch - roundscore: over, under or par
 
             // then seed next hole for active player
             nextHoleIndex = roundIndex + 1;
@@ -228,6 +230,8 @@
             
             // then bump to next player if exists to become activePlayer
             whereInPlayerList = activePlayerIndex < players.length - 1;
+
+            // switch to determine where in player list
             switch (whereInPlayerList) {
               // if true, it is not the last player in the list
               case true:
