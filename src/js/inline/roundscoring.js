@@ -1,7 +1,10 @@
 (() => {
   'use strict';
-    
-  // get DOM elements:
+
+  /////
+  // get all the DOM elements
+  /////
+
   // querySelector all the things
   let courseName = document.querySelector('[courseName]');
   let holeNumber = document.querySelector('[holenumber]');
