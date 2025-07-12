@@ -111,11 +111,10 @@
 
           if (event.target.hasAttribute('step')) { // clicked a number
 
-            // put number clicked into throwsbox
+            // grab the number clicked
             let numberClicked = event.target.getAttribute('step');
 
-            // let numberClickedUI = this.querySelector(`p[step="${numberClicked}"]`);
-
+            // put number clicked into throwsbox
             // a ternery in case there's a double digit throw for the hole:
             // is there stuff in target element ? if yes, concatenate new click : if no just drop click into target element
             throwsBox.innerText ? throwsBox.innerText += numberClicked : throwsBox.innerText = numberClicked;
