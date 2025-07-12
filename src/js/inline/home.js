@@ -154,6 +154,7 @@
         return response.json();
       })
       .then(data => {
+
         // already signed up
         if (data.status != 201) {
           setTimeout(() => {
