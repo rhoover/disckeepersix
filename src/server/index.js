@@ -19,6 +19,6 @@ app.use("/api", routerRead); // R
 app.use("/api", routerUpdate); // U
 app.use("/api", routerDelete); // D
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
   console.log(`Server listening at http://localhost:${port}`);
 });
