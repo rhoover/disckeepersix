@@ -151,10 +151,11 @@
           body: JSON.stringify(playerObject)
       })
       .then(response => {
+        console.log('response', response);
         return response.json();
       })
       .then(data => {
-
+console.log('data', data);
         // already signed up
         if (data.status != 201) {
           setTimeout(() => {
