@@ -16,47 +16,47 @@
       "type": "image/png"
     },
     {
-      "src": "./img/icons/ds-icon-72x72.png",
+      "src": "./img/dk-icns/ds-icon-72x72.png",
       "sizes": "72x72",
       "type": "image/png"
     },
     {
-      "src": "./img/icons/ds-icon-96x96.png",
+      "src": "./img/dk-icns/ds-icon-96x96.png",
       "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "./img/icons/ds-icon-128x128.png",
+      "src": "./img/dk-icns/ds-icon-128x128.png",
       "sizes": "128x128",
       "type": "image/png"
     },
     {
-      "src": "./img/icons/ds-icon-144x144.png",
+      "src": "./img/dk-icns/ds-icon-144x144.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "./img/icons/ds-icon-152x152.png",
+      "src": "./img/dk-icns/ds-icon-152x152.png",
       "sizes": "152x152",
       "type": "image/png"
     },
     {
-      "src": "./img/icons/ds-icon-192x192.png",
+      "src": "./img/dk-icns/ds-icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "./img/icons/ds-icon-256x256.png",
+      "src": "./img/dk-icns/ds-icon-256x256.png",
       "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "./img/icons/ds-icon-384x384.png",
+      "src": "./img/dk-icns/ds-icon-384x384.png",
       "sizes": "384x384",
       "type": "image/png"
     },
     {
-      "src": "./img/icons/ds-icon-512x512.png",
+      "src": "./img/dk-icns/ds-icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
