@@ -1,42 +1,62 @@
 {
-  "name": "Vermont Artisans Trail",
-  "short_name": "VT Artisans",
+  "name": "discScoring",
+  "short_name": "discScoring",
   "start_url": "/",
   "id": "/",
   "scope": "/",
-  "description": "A Comprehensive Mobile Reference and Directory of Vermont's Artisans and Their Communities",
+  "description": "A Simple But Thorough Web App To Keep Your Disc Golf Scores",
   "display": "standalone",
   "background_color": "#f0f0f0",
   "theme_color": "#66626F",
-  "categories": ["food", "travel", "lifestyle"],
+  "categories": ["sports", "lifestyle"],
   "icons": [
     {
-      "src": "./img/dk-icns/android-chrome-72x72.png",
+      "src": "./img/dk-icns/ds-icon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/icons/ds-icon-72x72.png",
       "sizes": "72x72",
       "type": "image/png"
     },
     {
-      "src": "./img/dk-icns/android-chrome-96x96.png",
+      "src": "./img/icons/ds-icon-96x96.png",
       "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "./img/dk-icns/android-chrome-144x144.png",
+      "src": "./img/icons/ds-icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/icons/ds-icon-144x144.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "./img/dk-icns/android-chrome-152x152.png",
+      "src": "./img/icons/ds-icon-152x152.png",
       "sizes": "152x152",
       "type": "image/png"
     },
     {
-      "src": "./img/dk-icns/android-chrome-192x192.png",
+      "src": "./img/icons/ds-icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "./img/dk-icns/android-chrome-512x512.png",
+      "src": "./img/icons/ds-icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/icons/ds-icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/icons/ds-icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
