@@ -1,0 +1,18 @@
+    <!-- Critical Styles -->
+    {% set critical %}
+      {% include "../../critical/critical.css" %}
+    {% endset %}
+    <style>
+      {{ critical | safe }}
+    </style>
+
+    <!-- Normal Styles -->
+
+    {% if page.fileSlug == '' %}
+      <link rel="stylesheet" type="text/css" href="{{ "/css/style-home.css" | rev }}" media="tty" onload="this.media='screen'"/>
+    {% else %}
+    {# This is how to concatenate strings with Nunjucks, join stuff in an array #}
+      {% set cssName = ['/css/style-', page.fileSlug, '.css'] | join %}
+      {# each stylesheet has its own name #}
+      <link rel="stylesheet" type="text/css" href="{{ cssName | rev }}" media="tty" onload="this.media='screen'"/>
+    {% endif%}
