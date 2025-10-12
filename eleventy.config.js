@@ -10,6 +10,7 @@ import { dateFormatter } from "./src/_eleventy/filters/date-format.js";
 import { sassOptions } from "./src/_eleventy/utilities/sassCompileOptions.js";
 import { htmlMinifier } from "./src/_eleventy/utilities/minify-html.js";
 
+// Main Config
 export default async function(eleventyConfig) {
 
   ////////////////////////////////////////////////////
@@ -68,6 +69,7 @@ export default async function(eleventyConfig) {
 
 }; // end export
 
+// Build Config
 export const config = {
   dir: {
     input: "src",
