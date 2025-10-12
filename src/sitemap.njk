@@ -8,7 +8,7 @@ eleventyExcludeFromCollections: true
   {% for page in collections.all %}
     {% if not page.data.draft %}
     <url>
-      <loc>https://vermontartisans.org{{ page.url | url }}</loc>
+      <loc>https://discscoring.com{{ page.url | url }}</loc>
       <lastmod>{{ page.date.toISOString() }}</lastmod>
       <changefreq>{{ page.data.changeFreq if page.data.changeFreq else "monthly" }}</changefreq>
     </url>
