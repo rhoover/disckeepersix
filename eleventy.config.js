@@ -36,8 +36,6 @@ export default async function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('favicon.ico');
   eleventyConfig.addPassthroughCopy('manifest.webmanifest');
   eleventyConfig.addPassthroughCopy('src/server');
-  // eleventyConfig.addPassthroughCopy('src/all-artisan-data');
-  // eleventyConfig.addPassthroughCopy('artisans-service-worker-min.js');
 
   ////////////////////////////////////////////////////
   // Plugins
