@@ -1,4 +1,38 @@
-
+---
+eleventyComputed:
+  meta:
+    "@context": "https://schema.org"
+    "@type": "WebSite"
+    "name": "Disc Scoring"
+    "about": "Lightweight and Elegant Disc Golf Score Keeping"
+    "url": "https://discscoring.com{{ page.url }}"
+    "mainEntityOfPage": "https://discscoring.com/"
+    "screenshot": "https://discscoring.com/img/discscoring-screenshot.png"
+    "audience": "Lifestyle Outdoors Sports"
+    "inLanguage": "en-US"
+    "isAccessibleForFree": "true"
+    "datePublished": "{{ page.date | dateFormat }}"
+    "logo":
+      "@type": "ImageObject"
+      "url": "https://discscoring.com/img/discoring-logo.webp"
+    "publisher":
+      "@type": "Organization"
+      "@id": "https://discscoring.com/#publisher"
+      "name": "Moosedog Studios"
+      "description": "Creating Custom Web Sites and Web Apps: Made in Vermont"
+      "url": "https://moosedog.io"
+      "email": "robin@moosedog.io"
+      "logo":
+        "@type": "ImageObject"
+        "url": "https://discscoring.com/img/moosedog-logo.png"
+      "contactPoint":
+        "@type": "ContactPoint"
+        "@id": "https://discscoring.com/#contactpoint"
+        "name": "Robin Hoover"
+        "email": "robin@moosedog.io"
+        "telephone": "+18026962455"
+        "contactType": "Web Developer"
+---
   {% include 'components/head-element.njk' %}
 
   <body>

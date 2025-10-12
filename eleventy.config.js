@@ -6,6 +6,9 @@ import { minify } from "terser";
 // Filters
 import { dateFormatter } from "./src/_eleventy/filters/date-format.js";
 
+// Shortcodes
+ import { createData } from "./src/_eleventy/shortcodes/structured-data.js";
+
 // Utilities
 import { sassOptions } from "./src/_eleventy/utilities/sassCompileOptions.js";
 import { htmlMinifier } from "./src/_eleventy/utilities/minify-html.js";
@@ -56,6 +59,9 @@ export default async function(eleventyConfig) {
   ////////////////////////////////////////////////////
   // Shortcodes
   ////////////////////////////////////////////////////
+
+  // json-ld data creation
+  eleventyConfig.addShortcode("schemaDataShortCode", createData);
 
   ////////////////////////////////////////////////////
   // Utilities
