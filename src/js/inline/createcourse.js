@@ -22,7 +22,7 @@ switch (window.location.hostname) {
   case 'localhost':
     baseURL = 'http://localhost:3000'
   break;
-  case 'disckeeper.io':
+  case 'discscoring.com':
     baseURL = 'https://discscoring.com:3000'
   break;
   default:

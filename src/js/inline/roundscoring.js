@@ -35,8 +35,8 @@
     case 'localhost':
       baseURL = 'http://localhost:3000'
     break;
-    case 'disckeeper.io':
-      baseURL = 'https://disckeeper.io:3000'
+    case 'discscoring.com':
+      baseURL = 'https://discscoring.com:3000'
     break;
     default:
     break;

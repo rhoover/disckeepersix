@@ -2,9 +2,9 @@
   'use strict';
 
   localforage.config({
-    name: 'disckeeper',
+    name: 'discscoring',
     storeName: 'discIDB',
-    description: 'IndexedDB Storage of Disckeeper Primary Log-In'
+    description: 'IndexedDB Storage of DiscScoring Primary Log-In'
   });
 
 })();
