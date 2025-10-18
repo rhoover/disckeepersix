@@ -7,16 +7,14 @@ const routerRead = express.Router();
 routerRead.get("/loggedin", async (req, res) => {
   let coll = await db.collection("playersPrimary");
 
-  let playerData = await coll.findOne({
-    email: req.query.email
-  });
+  let playerData = await coll.findOne({email: req.query.email});
 
   // const hashedPassword = playerData.password;
   // const userInputPassword = req.query.password;
 
   // bcrypt.compare(userInputPassword, hashedPassword, (err, result) => {
   //   if (result) {
-  //     res.json({status: 200, user: playerData});      
+  res.json({status: 200, user: playerData});      
   //   } else {
   //     res.json({status: 400});
   //   };

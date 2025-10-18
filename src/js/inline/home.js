@@ -226,6 +226,7 @@ console.log('data', data);
           return response.json();
         })
         .then(data => {
+          console.log(data);
           if (data.status == 200) {
             setTimeout(() => {
               form.reset();
