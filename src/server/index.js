@@ -35,9 +35,9 @@ switch (hostname) {
   case 'tripleDutyThree':
     console.log('it sees the server:', hostname);
     const keyCredentials = {
-      privateKey: fs.readFileSync('/etc/letsencrypt/live/disckeeper.io/privkey.pem', 'utf8'),
-      certKey: fs.readFileSync('/etc/letsencrypt/live/disckeeper.io/cert.pem', 'utf8'),
-      fullChainKey: fs.readFileSync('/etc/letsencrypt/live/disckeeper.io/fullchain.pem', 'utf8')
+      privateKey: fs.readFileSync('/etc/letsencrypt/live/discscoring.com/privkey.pem', 'utf8'),
+      certKey: fs.readFileSync('/etc/letsencrypt/live/discscoring.com/cert.pem', 'utf8'),
+      fullChainKey: fs.readFileSync('/etc/letsencrypt/live/discscoring.com/fullchain.pem', 'utf8')
     };
     const secureServer = https.createServer(keyCredentials, app);
     secureServer.listen(port, () => {
