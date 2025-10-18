@@ -1,5 +1,5 @@
 import express from "express";
-import bcrypt from "bcrypt";
+// import bcrypt from "bcrypt";
 import db from "../connect/db.js";
 
 const routerCreate = express.Router();
@@ -25,13 +25,13 @@ routerCreate.post("/signup", async (req, res) => {
     };
 
     // hash the password
-    try {
-      const saltRounds = 10;
-      const hashedPassword = await bcrypt.hash(newPrimary.password, saltRounds);
-      newPrimary.password = hashedPassword;
-    } catch (error) {
-      console.error(error);
-    };
+    // try {
+    //   const saltRounds = 10;
+    //   const hashedPassword = await bcrypt.hash(newPrimary.password, saltRounds);
+    //   newPrimary.password = hashedPassword;
+    // } catch (error) {
+    //   console.error(error);
+    // };
 
     // if truly new, add 'document' to collection
     await coll.insertOne(newPrimary);

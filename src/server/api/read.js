@@ -1,5 +1,5 @@
 import express from "express";
-import bcrypt from "bcrypt";
+// import bcrypt from "bcrypt";
 import db from "../connect/db.js";
 
 const routerRead = express.Router();
@@ -11,16 +11,16 @@ routerRead.get("/loggedin", async (req, res) => {
     email: req.query.email
   });
 
-  const hashedPassword = playerData.password;
-  const userInputPassword = req.query.password;
+  // const hashedPassword = playerData.password;
+  // const userInputPassword = req.query.password;
 
-  bcrypt.compare(userInputPassword, hashedPassword, (err, result) => {
-    if (result) {
-      res.json({status: 200, user: playerData});      
-    } else {
-      res.json({status: 400});
-    };
-  });
+  // bcrypt.compare(userInputPassword, hashedPassword, (err, result) => {
+  //   if (result) {
+  //     res.json({status: 200, user: playerData});      
+  //   } else {
+  //     res.json({status: 400});
+  //   };
+  // });
 });
 
 // 'ownerID' comes from how I wrote the original query for the browser
