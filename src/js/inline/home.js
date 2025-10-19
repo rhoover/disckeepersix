@@ -153,7 +153,7 @@
         return response.json();
       })
       .then(data => {
-console.log('data', data);
+
         // already signed up
         if (data.status != 201) {
           setTimeout(() => {
@@ -229,6 +229,9 @@ console.log('data', data);
             setTimeout(() => {
               form.reset();
               openModal.close();
+              frontLinks.forEach(link => {
+                link.classList.add('links-active');
+              });
               creds.innerHTML = `<p class="creds-signedup">Success ${data.user.nameFirst}! You're logged back in. Go have A Great Round!</p>`;
             },350);
             localforage.setItem('discIDB', data.user);          

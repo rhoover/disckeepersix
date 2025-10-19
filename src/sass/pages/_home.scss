@@ -64,7 +64,9 @@
   border: 1px solid core.colorfunction(blue, base);
   text-decoration: none;
   color: core.colorfunction(white, light55);
+  // this is why the links don't work at first
   pointer-events: none;
+  //
   background-size: cover;
   background-position: center;
   font-weight: 700;
