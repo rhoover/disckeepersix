@@ -56,6 +56,17 @@
   </script>
 
   {#########################################}
+  {# Logout Behavior #}
+  {#########################################}
+  <!-- logout behavior -->
+  {% set js %}
+    {% include "../../js/inline/logout.js" %}
+  {% endset %}
+  <script>
+    {{ js | jsmin | safe }}
+  </script>
+
+  {#########################################}
   {# Home Page Behavior #}
   {#########################################}
   {% if page.fileSlug == '' %}

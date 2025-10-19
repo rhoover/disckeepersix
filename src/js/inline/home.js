@@ -9,7 +9,6 @@
   let signupSubmit = document.querySelector('[data-button="signup-submit"]');
   let passwordToggle = document.querySelectorAll('.password-show');
   let frontLinks = document.querySelectorAll('.links');
-  let logOutNav = document.querySelector('#nav-logout');
 
   let baseURL;
   // development vs production URL
@@ -25,8 +24,7 @@
   };
 
   // already logged in?
-  localforage.getItem('discIDB')
-  .then((idbData) => {
+  localforage.getItem('discIDB').then((idbData) => {
     if (idbData) {
       creds.innerHTML = `<p class="creds-signedup">You're already logged in ${idbData.nameFirst}, go have a great round!</p>`;
       frontLinks.forEach(link => {
@@ -226,7 +224,7 @@ console.log('data', data);
           return response.json();
         })
         .then(data => {
-          console.log(data);
+
           if (data.status == 200) {
             setTimeout(() => {
               form.reset();
@@ -242,11 +240,4 @@ console.log('data', data);
         });
     }); // end eventListener
   }; // end loginPrimary
-
-  logOutNav.addEventListener('click', () => {
-    localforage.removeitem('discIDB')
-    .then(() => {
-      location.reload();
-    });
-  });
 })();
