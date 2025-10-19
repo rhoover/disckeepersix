@@ -8,7 +8,7 @@
 
   // make it work
   if (navigator.share) {
-    shareButton.classList.add('share-everywhere-visible');
+    shareButton.classList.add('share-button-visible');
 
     shareButton.addEventListener('click', shareButtonStuff);
     function shareButtonStuff() {

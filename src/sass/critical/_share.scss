@@ -1,5 +1,8 @@
 @use "../component-helpers/" as component;
 
 .share-button {
-  @extend %side-button
+  @extend %side-button;
+  &-visible {
+    display: block;
+  }
 }
