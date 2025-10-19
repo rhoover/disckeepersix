@@ -87,18 +87,21 @@
       if (roundsData.length > 1) {
         dedupeMe = roundsData.filter((obj, index) => {
           return index === roundsData.findIndex(o => obj.courseName === o.courseName)
-        });        
-      };
+        });
+        roundHistory.buildChooseCourseSection(dedupeMe);
+        roundHistory.buildRoundsList(roundsData, dedupeMe);
+      } else {
+        roundHistory.buildChooseCourseSection(roundsData);
+        roundHistory.buildRoundsList(roundsData, dedupeMe);
+    };
 
-      roundHistory.buildChooseCourseSection(dedupeMe);
-      roundHistory.buildRoundsList(roundsData, dedupeMe);
     }, // end massageRoundsData
 
-    buildChooseCourseSection(dedupedData) {
+    buildChooseCourseSection(incomingData) {
 
       chooseSection.innerHTML = ``;
 
-      dedupedData.forEach((course) => {
+      incomingData.forEach((course) => {
         chooseSection.innerHTML += `
         <button class="button" course="${course.courseID}">${course.courseName}</button>
         `;
@@ -134,17 +137,25 @@
       }); // end customElements.define()
     }, // end manageChooseCourseSectionButtons()
 
+    // buildRoundsList(roundsData, dedupedData) {
     buildRoundsList(roundsData, dedupedData) {
 
-      // first create each dialog in the section
-      dedupedData.forEach((course) => {
-        roundsSection.innerHTML += `
-        <course-component>
-          <dialog class="course" courseid="${course.courseID}" coursename="${course.courseName}">
-          </dialog>
-        </course-component>
-        `;
-      });
+      // first create each dialog in the section, depending on the data source
+      if (dedupedData) { // more than one round
+        createDOM(dedupedData);
+      } else { // only one round
+        createDOM(roundsData);
+      };
+      function createDOM(incomingRoundsData) {
+        incomingRoundsData.forEach((course) => {
+          roundsSection.innerHTML += `
+          <course-component>
+            <dialog class="course" courseid="${course.courseID}" coursename="${course.courseName}">
+            </dialog>
+          </course-component>
+          `;
+        });        
+      };
 
       // then capture each dialog element in the section
       roundsSectionDialogs = document.querySelectorAll('.course');
