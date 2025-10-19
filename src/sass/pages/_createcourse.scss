@@ -15,18 +15,26 @@
   &-input {
     &-text {
       @extend %form-input-text;
-      width: 85%;
     }
     &-label {
+      position: relative;
       @extend %form-input-label;
+      transform: translateY(-1.75rem);
     }
-    &-clear {
-      @extend %form-input-text;
-      padding-left: 0px;
-      padding-right: 0px;
-      width: 10%;
-      text-align: center;
+    &-button {
+      position: absolute;
+      right: 0px;
+      align-self: center;
+      border: none;
+      background: transparent;
     }
+    // &-clear {
+    //   @extend %form-input-text;
+    //   padding-left: 0px;
+    //   padding-right: 0px;
+    //   width: 10%;
+    //   text-align: center;
+    // }
   }
   &-response {
     display: grid;

@@ -7,9 +7,13 @@ permalink: "/createcourse.html"
 <!-- form element -->
 <form class="form">
   <div class="form-input">
-    <input type="text" name="coursename" id="coursename" class="form-input-text" required>
-    <input type="reset" value="X" alt="Clear the search form" class="form-input-clear">
-    <label for="courseName"  class="form-input-label">Course Name:</label>
+    <label for="courseName"  class="form-input-label">Course Name:
+      <input type="text" name="coursename" id="coursename" class="form-input-text" required>
+      <button class="form-input-button">
+          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width="48" height="48" fill='red'><path d='M202.829 197.172a4 4 0 1 1-5.658 5.656L128 133.658l-69.171 69.17a4 4 0 0 1-5.658-5.656L122.343 128 53.171 58.828a4 4 0 0 1 5.658-5.656L128 122.342l69.171-69.17a4 4 0 0 1 5.658 5.656L133.657 128Z'/></svg>
+        </button>
+      {# <input type="reset" value="X" alt="Clear the search form" class="form-input-clear"> #}
+    </label>
   </div>
   <div class="form-holes">
     <p class="form-holes-question">How Many Holes Are There?</p>

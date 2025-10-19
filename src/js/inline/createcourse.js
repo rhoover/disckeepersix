@@ -3,6 +3,8 @@
 
 // grab the DOM elements
 let createCourseForm = document.querySelector('.form');
+let formInput = createCourseForm.querySelector('.form-input-text');
+let clearButton = createCourseForm.querySelector('.form-input-button');
 let formResponseSection = document.querySelector('.form-response');
 let existsDialog = document.querySelector('.exists');
 let existsText = document.querySelector('.exists-text');
@@ -55,6 +57,25 @@ let createNewCourse = {
 
   actualCreation(courseObject, data) {
 
+    // deal with the input field with it's clear button
+    if (formInput.value === '') {
+      clearButton.style.display = 'none';
+    };
+
+    formInput.addEventListener('input', () => {
+      if (formInput.value !== '') {
+        clearButton.style.display = 'inline-block'; // or 'block', depending on layout
+      } else {
+        clearButton.style.display = 'none';
+      };
+    });
+
+    clearButton.addEventListener('click', () => {
+        textInput.value = '';
+        clearButton.style.display = 'none';
+    });
+
+    // then deal with the entire form stuff
     formResponseSection.addEventListener('click', (event) => {
       event.preventDefault();
   
