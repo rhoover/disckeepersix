@@ -65,6 +65,10 @@
   text-decoration: none;
   color: core.colorfunction(white, light55);
   pointer-events: none;
+  background-size: cover;
+  background-position: center;
+  font-weight: 700;
+  cursor: pointer;
   @extend %box-shadow;
   &-text {
     font-size: var(--step-4);
@@ -76,19 +80,15 @@
       4px 4px 10px rgba(core.colorfunction(white, base), 0.75);
   }
   &-scoring {
-    @extend %home-item-base;
     background-image: url("/img/home/scoring.webp");
   }
   &-createcourse {
-    @extend %home-item-base;
     background-image: url("/img/home/createCourse.webp");
   }
   &-createplayer {
-    @extend %home-item-base;
     background-image: url("/img/home/createPlayer.webp");
   }
   &-roundhistory {
-    @extend %home-item-base;
     background-image: url("/img/home/roundHistory.webp");
   }
   &-active {
