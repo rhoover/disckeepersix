@@ -244,16 +244,17 @@
             <p>Par: ${hole.holePar}</p>
           </div>
           <div class="round-modal-hole-holedata">
-            <p>Hole Throws: ${hole.holeThrows}</p>
-            <p>Hole Score: ${hole.holeOverUnder == 0
+            <p>Hole:</p>
+            <p>Throws:  ${hole.holeThrows}</p>
+            <p>Score:   ${hole.holeOverUnder == 0
             ? `Par`
             : `${hole.holeOverUnder}`
-            }
-            </p>
+            }</p>
           </div>
           <div class="round-modal-hole-rounddata">
-            <p>Round Throws: ${hole.roundThrows}</p>
-            <p>Round Score: ${hole.roundOverUnder == 0
+            <p>Round So Far:</p>
+            <p>Throws:  ${hole.roundThrows}</p>
+            <p>Score:   ${hole.roundOverUnder == 0
             ? `Par`
             : `${hole.roundOverUnder}`
             }
