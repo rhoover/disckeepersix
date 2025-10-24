@@ -210,4 +210,11 @@
     <script>
       {{ js | jsmin | safe }}
     </script>
+    <!-- statistics modal-scroller button behavior-->
+    {% set js %}
+      {% include "../../js/inline/scroll-top-modal-statistics.js" %}
+    {% endset %}
+    <script>
+      {{ js | jsmin | safe }}
+    </script>
   {% endif %}

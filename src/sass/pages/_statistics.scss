@@ -55,14 +55,20 @@
   @extend %dialog-success;
   padding: 0px;
   &[open] {
+    display: grid;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 85vh;
-    width: 100vw;
+    grid-template-rows: max-content max-content 1fr;
+    padding: 0px;
+    width: 100%;
   }
   &-header {
     @extend %modal-header;
+      border-bottom: 1px solid core.colorfunction(blue, base);
+      color: core.colorfunction(black, base);
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+      justify-content: space-between;
     &-text {
       @extend %modal-header-text;
       font-size: var(--step-2);
@@ -74,12 +80,17 @@
     margin-right: 0px;
     margin: 16px 16px 16px 16px;
   }
-  &-chart-hole {
-    margin: 16px 8px 16px 8px;
-    padding: 8px;
-    border: 1px solid core.colorfunction(blue, base);
-    border-radius: 8px;
-    @extend %box-shadow;
+  &-chart {
+      display: grid;
+      row-gap: 16px;
+      padding: 16px 16px;
+      color: core.colorfunction(black, base);
+      overflow-y: scroll;
+    &-hole {
+      border: 1px solid core.colorfunction(blue, base);
+      border-radius: 8px;
+      @extend %box-shadow;
+    }
   }
 }
 

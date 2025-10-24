@@ -330,7 +330,7 @@
 
       holesDiv.showModal();
 
-      holesDivHeader.innerHTML = `<p class="holes-header-text">${chosenCourseName}</p><p>Hole-By-Hole</p>`;
+      holesDivHeader.innerHTML = `<p class="holes-header-text">${chosenCourseName}</p><p>Hole-By-Hole Performance</p>`;
 
       // create a div for each hole to hold its own chart
       minMaxAvgHole.forEach((hole, index) => {
