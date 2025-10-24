@@ -246,7 +246,7 @@
             stack: 'Total',
             label: {
               show: true,
-              formatter: '{b}',
+              formatter: '{b}: {c}',
               position: 'inside',
               fontSize: 24
             },
@@ -411,7 +411,7 @@
               stack: 'Total',
               label: {
                 show: true,
-                formatter: '{b}',
+                formatter: '{b}: {c}',
                 position: 'inside',
                 fontSize: 24
               },
