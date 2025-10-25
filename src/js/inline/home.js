@@ -218,7 +218,7 @@
         email: loginemail,
         password: loginpassword
       };
-
+      
       fetch(`${baseURL}/api/loggedin?email=${loginObject.email}&password=${loginObject.password}`)
         .then(response => {
           return response.json();
