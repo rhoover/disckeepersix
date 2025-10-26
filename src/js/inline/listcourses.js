@@ -51,7 +51,6 @@
     }, //end getCourses
 
     buildDOM(courses) {
-      console.log(courses);
       courses.forEach((course) => {
         coursesList.innerHTML += `
         <course-card class="item" courseid="${course._id}">
