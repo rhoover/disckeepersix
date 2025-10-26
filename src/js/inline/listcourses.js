@@ -6,6 +6,7 @@
   let insertCourseName = document.querySelector('.modal-warning-name');
   let insertNumberOfRounds = document.querySelector('.modal-warning-number');
   let coursesList = document.querySelector('.items');
+  let coursesListTemp = document.querySelector('.items-placeholder');
   let successfulDeletion = document.querySelector('.modal-success');
   let successModal = document.querySelector('.success');
   let successModalText = document.querySelector('.success-text');
@@ -51,6 +52,7 @@
     }, //end getCourses
 
     buildDOM(courses) {
+      coursesListTemp.remove();
       courses.forEach((course) => {
         coursesList.innerHTML += `
         <course-card class="item" courseid="${course._id}">
