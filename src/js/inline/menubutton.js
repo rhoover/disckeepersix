@@ -8,10 +8,6 @@
     let menuSVG = document.querySelector('.icon-menu-toggle');
 
     let navMenu = document.querySelector('.nav');
-    let navClose = document.querySelector('.nav-close');
-    
-    // let accordianMenu = document.querySelector('.nav-item-content');
-    // let accordianIcon = document.querySelector('.nav-item-icon');
 
     menuButton.addEventListener('click', toggleMenuClasses);
     function toggleMenuClasses() {
@@ -30,8 +26,8 @@
         menuText.innerHTML = 'Menu'
       };      
     };
-    
-    navClose.addEventListener('click', toggleCloseClasses)
+
+    navMenu.addEventListener('click', toggleCloseClasses)
     function toggleCloseClasses() {
 
       navMenu.classList.toggle('nav-open');
