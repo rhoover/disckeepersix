@@ -12,10 +12,10 @@ let successDialog = document.querySelector('.success');
   // development vs production URL
   switch (window.location.hostname) {
     case 'localhost':
-      baseURL = 'http://localhost:3000'
+      baseURL = 'http://localhost:3030'
     break;
     case 'discscoring.com':
-      baseURL = 'https://discscoring.com:3000'
+      baseURL = 'https://discscoring.com:3030'
     break;
     default:
     break;

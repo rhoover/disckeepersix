@@ -13,7 +13,7 @@ import routerDelete from "./api/delete.js";
 
 // initialize
 const app = express();
-const port = 3000;
+const port = 3030;
 const hostname = os.hostname();
 
 // middleware
@@ -33,7 +33,7 @@ switch (hostname) {
     });    
   break;
   case 'tripleDutyThree':
-    console.log('it sees the server:', hostname);
+    console.log('it sees the server:', hostname, port);
     const keyCredentials = {
       privateKey: fs.readFileSync('/etc/letsencrypt/live/discscoring.com/privkey.pem', 'utf8'),
       certKey: fs.readFileSync('/etc/letsencrypt/live/discscoring.com/cert.pem', 'utf8'),
